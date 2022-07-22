@@ -9,7 +9,9 @@ const MeetupItem = (props) => {
   return (
     <li className="meetup__item">
       <div className="meetup__image-container">
-        <img alt="meetup" src={props.image}></img>
+        <picture>
+          <img alt="meetup" src={props.image}></img>
+        </picture>
       </div>
       <div className="meetup__text-container">
         <h2>{props.title}</h2>

@@ -5,7 +5,9 @@ const MeetupDetails = (props) => {
         <h2>{props.data.title}</h2>
         <div className="detail__img-container">
           <a title="Open in a Full-Screen" href={props.data.image}>
-            <img src={props.data.image}></img>
+            <picture>
+              <img src={props.data.image}></img>
+            </picture>
           </a>
         </div>
         <div className="detail__text">
