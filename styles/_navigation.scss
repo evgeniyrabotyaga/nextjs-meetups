@@ -1,0 +1,43 @@
+.navigation {
+  box-shadow: 0 5px 10px rgba(204, 204, 204, 0.308);
+
+  &__container {
+    max-width: 122rem;
+    width: 100%;
+    margin: 0 auto;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    h1 {
+      font-size: 2.3rem;
+
+      @media screen and(max-width: 600px) {
+        display: none;
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 3rem;
+      height: 100%;
+
+      li {
+        font-size: 1.6rem;
+
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+
+        a {
+          padding: 0 1rem;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
