@@ -1,30 +1,30 @@
-import { MongoClient } from "mongodb";
+// import { MongoClient } from "mongodb";
 
-// /api/new-meetup
-// POST /api/new-meetup
+// // /api/new-meetup
+// // POST /api/new-meetup
 
-// MongoDB не работает в России
+// // MongoDB не работает в России
 
-async function handler(req, res) {
-  if (req.method === "POST") {
-    const data = req.body;
+// async function handler(req, res) {
+//   if (req.method === "POST") {
+//     const data = req.body;
 
-    const client = await MongoClient
-      .connect
-      // "mongodb+srv://maximilian:arlAapzPqFyo4xUk@cluster0.ntrwp.mongodb.net/meetups?retryWrites=true&w=majority"
-      ();
-    const db = client.db();
+//     const client = await MongoClient
+//       .connect
+//       // "mongodb+srv://maximilian:arlAapzPqFyo4xUk@cluster0.ntrwp.mongodb.net/meetups?retryWrites=true&w=majority"
+//       ();
+//     const db = client.db();
 
-    const meetupsCollection = db.collection("meetups");
+//     const meetupsCollection = db.collection("meetups");
 
-    const result = await meetupsCollection.insertOne(data);
+//     const result = await meetupsCollection.insertOne(data);
 
-    console.log(result);
+//     console.log(result);
 
-    client.close();
+//     client.close();
 
-    res.status(201).json({ message: "Meetup inserted!" });
-  }
-}
+//     res.status(201).json({ message: "Meetup inserted!" });
+//   }
+// }
 
-export default handler;
+// export default handler;
